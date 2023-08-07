@@ -73,12 +73,13 @@ export default function Form(props) {
         </label>
         <textarea
           className="form-control"
+
           value={input.text}
           name="text"
           id="exampleFormControlTextarea1"
           rows="11"
           onChange={(e) => setInput({ ...input, text: e.target.value })}
-          style={{ backgroundColor: props.mode === "light" ? "white" : "grey" }}
+          style={{ backgroundColor: props.mode === "light" ? "white" : "grey", color: props.mode === "light"? "black" : "white"}}
         ></textarea>
         <button className="btn btn-primary mx-2 mt-3" onClick={HandleUpeercase}>
           Uppercase button
@@ -116,7 +117,7 @@ export default function Form(props) {
               </div>
               <div className="modal-body">
                 <div className="modal-body"  style={{
-          color: props.mode === "light" ? "black" : "white",
+          color: 'black',
           fontWeight: "bold",
         }}>
                   You have {texts.length}{" "}
@@ -125,7 +126,7 @@ export default function Form(props) {
                   {texts.split(/\s+/).filter(Boolean).length > 1
                     ? "words"
                     : "word"}
-                  .
+                  
                 </div>
               </div>
               <div className="modal-footer"></div>
