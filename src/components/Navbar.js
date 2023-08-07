@@ -16,14 +16,11 @@ export default function Navbar(props) {
           <li className="nav-item">
             <Link className="nav-link active" aria-current="page" to="/">{props.homeText}</Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/about">{props.AboutText}</Link>
-          </li>
+     
         </ul>
    
         <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-primary" type="submit">Search</button>
+         
           <div className={`form-check form-switch text-${props.mode === "light" ?"dark":"light"}`}>
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Switch mode</label>
@@ -37,11 +34,10 @@ export default function Navbar(props) {
 Navbar.propTypes = {
     title: PropTypes.string,
     homeText: PropTypes.string,
-    AboutText: PropTypes.string
-
+   
 }
 Navbar.defaultProps = {
     title : "Set title here.",
     homeText : "Set your homeText here.",
-   AboutText : "Set your AboutText here."
+ 
   };

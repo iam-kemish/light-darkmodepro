@@ -3,7 +3,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
-import About from './components/About';
+
 import { useState } from 'react';
 
 import Alert from './components/Alert';
@@ -15,7 +15,7 @@ import {
 } from "react-router-dom";
 
 
-// import { Slay } from './Slay';
+
 
 function App() {
   const[mode, setmode] = useState("light");
@@ -45,12 +45,12 @@ function App() {
     <>
      
     <BrowserRouter>
-    <Navbar title="TextUtils" homeText="Home" AboutText= "About TextUtils" mode={mode} toggleMode={toggleMode} />
+    <Navbar title="TextUtils" homeText="Home"  mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
-    <div className="container my-3">
+    <div className="container mt-5">
     <Routes>
         <Route path="/" element={  <Form heading = "Enter your text here" mode={mode} showAlert={showAlert}/>  } />
-        <Route path="about" element={ <About/> } />
+       
      
       </Routes>
         </div>
